@@ -81,31 +81,6 @@ for i = 1:length(gamaPossibles)
     end
 end
 
-% % figure 7
-% OMAminus20 = 100*((sum(regimes(1,:) == "OMA"))/length(theta));
-% NOMAminus20 = 100*((sum(regimes(1,:) == "NOMA"))/length(theta));
-% RSMAminus20 = 100*((sum(regimes(1,:) == "RSMA"))/length(theta));
-% SDMAminus20 = 100*((sum(regimes(1,:) == "SDMA"))/length(theta));
-% multiCastminus20 = 100*((sum(regimes(1,:) == "Multicast"))/length(theta));
-% 
-% OMAminus10 = 100*((sum(regimes(2,:) == "OMA"))/length(theta));
-% NOMAminus10 = 100*((sum(regimes(2,:) == "NOMA"))/length(theta));
-% RSMAminus10 = 100*((sum(regimes(2,:) == "RSMA"))/length(theta));
-% SDMAminus10 = 100*((sum(regimes(2,:) == "SDMA"))/length(theta));
-% multiCastminus10 = 100*((sum(regimes(2,:) == "Multicast"))/length(theta));
-% 
-% OMAminus3 = 100*((sum(regimes(3,:) == "OMA"))/length(theta));
-% NOMAminus3 = 100*((sum(regimes(3,:) == "NOMA"))/length(theta));
-% RSMAminus3 = 100*((sum(regimes(3,:) == "RSMA"))/length(theta));
-% SDMAminus3 = 100*((sum(regimes(3,:) == "SDMA"))/length(theta));
-% multiCastminus3 = 100*((sum(regimes(3,:) == "Multicast"))/length(theta));
-% 
-% OMAgama0 = 100*((sum(regimes(4,:) == "OMA"))/length(theta));
-% NOMAgama0 = 100*((sum(regimes(4,:) == "NOMA"))/length(theta));
-% RSMAgama0 = 100*((sum(regimes(4,:) == "RSMA"))/length(theta));
-% SDMAgama0 = 100*((sum(regimes(4,:) == "SDMA"))/length(theta));
-% multiCastgama0 = 100*((sum(regimes(4,:) == "Multicast"))/length(theta));
-
 figure(1)
 num_levels = 30;
 % Crie um gráfico de cores usando pcolor
