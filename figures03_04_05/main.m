@@ -83,89 +83,67 @@ end
 
 figure(1)
 num_levels = 30;
-% Crie um gráfico de cores usando pcolor
 h = pcolor(rhoMatrix(1,:), gamadb, matrixT);
-colormap('parula'); % Escolha um mapa de cores, por exemplo, 'jet'
-shading interp; % Interpola as cores para um visual mais suave
-
-% Defina os limites dos eixos
+colormap('parula'); 
+shading interp; 
 xlim([min(rhoMatrix(1,:)), max(rhoMatrix(1,:))]);
 ylim([min(gamadb), max(gamadb)]);
-
-% Adicione uma barra de cores
 ch = colorbar;
-
-% Personalize o gráfico (opcional)
 xlabel('\rho');
 ylabel('Channel Strength disparity \gamma_{dB}[dB]');
 title('Optimum t');
-valores_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
-valores_y = [-20, -15, -10, -5, 0];
-% Aplique os valores ao eixo x
-xticks(valores_x);
-yticks(valores_y);
+values_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
+values_y = [-20, -15, -10, -5, 0];
+xticks(values_x);
+yticks(values_y);
 set(ch, 'YTick', [0,0.2,0.4,0.6,0.8, 1]);
 set(get(ch, 'ylabel'), 'string', 'Z');
-% Adicionando contornos pretos
-hold on; % Para manter o gráfico atual
-contour(rhoMatrix(1,:),gamadb,matrixT,num_levels, 'k'); % 'k' especifica a cor preta para as linhas de contorno
-hold off; % Liberar o gráfico
+hold on; 
+contour(rhoMatrix(1,:),gamadb,matrixT,num_levels, 'k'); 
+hold off; 
 
 figure(2)
 
-% Crie um gráfico de cores usando pcolor
-h = pcolor(rhoMatrix(1,:), gamadb, ind);
-colormap('parula'); % Escolha um mapa de cores, por exemplo, 'jet'
-shading flat;
 
-% Defina os limites dos eixos
+h = pcolor(rhoMatrix(1,:), gamadb, ind);
+colormap('parula'); 
+shading flat;
 xlim([min(rhoMatrix(1,:)), max(rhoMatrix(1,:))]);
 ylim([min(gamadb), max(gamadb)]);
-
-% Adicione uma barra de cores
 ch = colorbar;
-
-% Personalize o gráfico (opcional)
 xlabel('\rho');
 ylabel('Channel Strength disparity \gamma_{dB}[dB]');
 title('Regions of operation for RSMA,SDMA,NOMA,OMA and Multicast.');
-valores_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
-valores_y = [-20, -15, -10, -5, 0];
+values_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
+values_y = [-20, -15, -10, -5, 0];
 % Aplique os valores ao eixo x
-xticks(valores_x);
-yticks(valores_y);
+xticks(values_x);
+yticks(values_y);
 
 figure(3)
-num_levels = 10;
-% Crie um gráfico de cores usando pcolor
-h = pcolor(rhoMatrix(1,:), gamadb, ralationRateMatrix);
-colormap('parula'); % Escolha um mapa de cores, por exemplo, 'jet'
-shading interp; % Interpola as cores para um visual mais suave
 
-% Defina os limites dos eixos
+num_levels = 10;
+h = pcolor(rhoMatrix(1,:), gamadb, ralationRateMatrix);
+colormap('parula'); 
+shading interp; 
 xlim([min(rhoMatrix(1,:)), max(rhoMatrix(1,:))]);
 ylim([min(gamadb), max(gamadb)]);
-
-% Adicione uma barra de cores
 ch = colorbar;
-
-% Personalize o gráfico (opcional)
 xlabel('\rho');
 ylabel('Channel Strength disparity \gamma_{dB}[dB]');
 title('Fig 05 - Relative sum-rate gain [%] of RSMA over dynamic switching between SDMA and NOMA.');
-valores_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
-valores_y = [-20, -15, -10, -5, 0];
-% Aplique os valores ao eixo x
-xticks(valores_x);
-yticks(valores_y);
+values_x = [0, 0.2, 0.4, 0.6, 0.8, 1];
+values_y = [-20, -15, -10, -5, 0];
+xticks(values_x);
+yticks(values_y);
 range = 0:1:(10*log10(P));
 set(ch, 'YTick', range);
 set(get(ch, 'ylabel'), 'string', 'Z');
-% Adicionando contornos pretos
-hold on; % Para manter o gráfico atual
-contour(rhoMatrix(1,:),gamadb,ralationRateMatrix,num_levels, 'k'); % 'k' especifica a cor preta para as linhas de contorno
-hold off; % Liberar o gráfico
+hold on; 
+contour(rhoMatrix(1,:),gamadb,ralationRateMatrix,num_levels, 'k'); 
+hold off; 
 
+% Not completed yet
 % figure(4)
 % percentage1 = [multiCastminus20,SDMAminus20,OMAminus20,NOMAminus20,RSMAminus20];
 % percentage2 = [multiCastminus10,SDMAminus10,OMAminus10,NOMAminus10,RSMAminus10];
